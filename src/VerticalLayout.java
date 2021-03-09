@@ -34,6 +34,7 @@ public class VerticalLayout implements InterfaceElement {
         for (InterfaceElement element : elements) {
             element.enlargeSize(width, 0);
         }
+        //Изменение размеров внутрених элементов
         char[][] verticalLayout = new char[getHeight()][getWidth()];
         int currentHeight = 0;
         for (InterfaceElement element : elements) {
@@ -43,10 +44,12 @@ public class VerticalLayout implements InterfaceElement {
                 System.arraycopy(insertedElement[i - currentHeight], 0, verticalLayout[i], 0, insertedElement[i - currentHeight].length);
             }
             currentHeight += height;
+            //Вставка внутрених элементов
         }
         return verticalLayout;
     }
 
     @Override
-    public void enlargeSize(int width, int height) {}
+    public void enlargeSize(int width, int height) {
+    }
 }

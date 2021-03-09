@@ -1,6 +1,6 @@
 public class Rectangle implements InterfaceElement {
 
-    private InterfaceElement element;
+    private final InterfaceElement element;
     private int downIntend = 0;
 
     public Rectangle(InterfaceElement element) {

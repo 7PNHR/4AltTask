@@ -35,6 +35,7 @@ public class HorizontalLayout implements InterfaceElement {
             int delta = enlargedHeight - element.getHeight();
             element.enlargeSize(0, delta);
         }
+        //Изменение размеров внутрених элементов
         char[][] horizontalLayout = new char[getHeight()][getWidth()];
         int currentWidth = 0;
         for (InterfaceElement element : elements) {
@@ -45,10 +46,12 @@ public class HorizontalLayout implements InterfaceElement {
                 System.arraycopy(insertedElement[i], 0, horizontalLayout[i], currentWidth, insertedElement[i].length);
             }
             currentWidth += width + 1;
+            //Вставка внутрених элементов
         }
         return horizontalLayout;
     }
 
     @Override
-    public void enlargeSize(int width, int height) {}
+    public void enlargeSize(int width, int height) {
+    }
 }

@@ -2,21 +2,13 @@ public class Text implements InterfaceElement {
 
     private String text;
 
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
     public Text(String text) {
         this.text = text;
     }
 
     @Override
     public int getWidth() {
-        return text.length();//Отступ слева и справа
+        return text.length();
     }
 
     @Override
@@ -32,9 +24,11 @@ public class Text implements InterfaceElement {
 
     @Override
     public void enlargeSize(int width, int height) {
+        StringBuilder stringBuilder = new StringBuilder(text);
         for (int i = text.length(); i < width; i++) {
-            text += " ";
+            stringBuilder.append(" ");
         }
+        text = stringBuilder.toString();
     }
 
 }
