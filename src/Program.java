@@ -30,9 +30,9 @@ public class Program {
             return;
         }
         for (char[] chars : array) {
-            for (int j = 0; j < chars.length; j++) {
-                System.out.print(chars[j]);
-                if (chars[j] == '\u0000') System.out.print(" ");
+            for (char aChar : chars) {
+                System.out.print(aChar);
+                if (aChar == '\u0000') System.out.print(" ");
             }
             System.out.println();
         }
