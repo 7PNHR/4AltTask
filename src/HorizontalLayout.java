@@ -40,7 +40,6 @@ public class HorizontalLayout implements InterfaceElement {
         int currentWidth = 0;
         for (InterfaceElement element : elements) {
             int width = element.getWidth();
-            int height = element.getHeight();
             char[][] insertedElement = element.calculate();
             for (int i = 0; i < element.getHeight(); i++) {
                 System.arraycopy(insertedElement[i], 0, horizontalLayout[i], currentWidth, insertedElement[i].length);
